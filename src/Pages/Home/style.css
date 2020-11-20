@@ -1,0 +1,45 @@
+/* :root {
+    --title-size: 50px;
+    --subtitle-size: 30px;
+    --body-size: 20px;
+    --bold: 700;
+    --demi-bold: 600;
+    --reg: 500;
+    --yellow2: #F6D200;
+  } */
+
+.title, .subTitle {
+    font-size: var(--subtitle-size);
+    font-weight: var(--demi-bold);
+}
+
+.subTitle {
+    color: var(--yellow2);
+}
+
+.introP {
+    font-size: 1.3em;
+}
+
+.scroll {
+    font-weight: var(--bold);
+    font-size: .95em;
+}
+
+.p2title {
+    font-size: 6.5em;
+    font-weight: var(--bold);
+}
+
+.title2 {
+    color: var(--yellow2);
+}
+
+.homeChapterLinks {
+    color: black;
+    font-size: var(--subtitle-size);
+    font-weight: var(--demi-bold);
+    text-decoration: none;
+    padding: .8em 0em;
+}
+
