@@ -23,7 +23,6 @@ class Chapter extends Component {
                 </Box>
             )
         }
-
     }
 
 

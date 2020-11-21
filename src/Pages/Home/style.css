@@ -18,7 +18,7 @@
 }
 
 .introP {
-    font-size: 1.3em;
+    font-size: 1.1em;
 }
 
 .scroll {
@@ -27,7 +27,7 @@
 }
 
 .p2title {
-    font-size: 6.5em;
+    font-size: var(--title-size);
     font-weight: var(--bold);
 }
 
@@ -37,7 +37,7 @@
 
 .homeChapterLinks {
     color: black;
-    font-size: var(--subtitle-size);
+    font-size: var(--demisub-size);
     font-weight: var(--demi-bold);
     text-decoration: none;
     padding: .8em 0em;

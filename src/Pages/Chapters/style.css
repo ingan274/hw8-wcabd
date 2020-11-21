@@ -1,0 +1,14 @@
+.chapterTitle1 {
+    font-size: var(--title-size);
+    font-weight: var(--bold);
+}
+
+.chapterText1 {
+    font-size: var(--demisub-size);
+    font-weight: var(--demi-bold);
+}
+
+.chapterTitle {
+    font-size: var(--subtitle-size);
+    font-weight: var(--demi-bold);
+}

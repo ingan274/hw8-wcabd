@@ -46,12 +46,12 @@ class Home extends Component {
                 <Grid container direction="row" spacing={2}>
                     <Grid item container direction="column" xs={12} md={6} >
                         <Box className="introText" justifyContent="center">
-                            <Box className="title">{this.state.p1_title}</Box>
+                            <Box className="title" my={3} >{this.state.p1_title}</Box>
                             <Box className="subTitle">{this.state.p1_subtitle}</Box>
-                            <Box className="introP" my={3}>{this.state.p1_into1}</Box>
-                            <Box className="introP" my={3}>{this.state.p1_into2}</Box>
-                            <Box className="introP" my={3}>{this.state.p1_into3}</Box>
-                            <Box className="scroll" my={4}>{this.state.scroll}</Box>
+                            <Box className="introP" my={2}>{this.state.p1_into1}</Box>
+                            <Box className="introP" my={2}>{this.state.p1_into2}</Box>
+                            <Box className="introP" my={2}>{this.state.p1_into3}</Box>
+                            <Box className="scroll" my={3}>{this.state.scroll}</Box>
                         </Box>
                     </Grid>
                     <Grid item xs={12} md={6} ></Grid>

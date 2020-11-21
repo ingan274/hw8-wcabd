@@ -1,6 +1,7 @@
 :root {
   --title-size: 4.5em;
-  --subtitle-size: 2.5em;
+  --subtitle-size: 2em;
+  --demisub-size: 1.45em;
   --bold: 700;
   --demi-bold: 600;
   --reg: 500;
