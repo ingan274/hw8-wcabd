@@ -6,30 +6,51 @@ import {
 } from "react-router-dom";
 import Home from "./Pages/Home";
 import Chapters from "./Pages/Chapters";
-import Container from "./Component/Container/index.js";
+import Container from "./Component/Container";
+import ChapterNav from "./Component/StickyHeader";
 
 class App extends Component {
-  render = () => {
-    const home = {
-      p1: {
-        title: "WHAT CAN A BODY DO?",
-        subtitle: "How We Meet the Build World",
-        p1: "How we meet the built environment depends on both bodies and worlds. The world is built for the average person, but we are not ordinary people. We have normalized the idea of an ideal body, and anything deviant of that is less than normal.",
-        p2: "Disability results from the shape of the world's rigidly, lacking sense of what a body does or how it moves through the world. We see disability as moments when the body finds itself in \"misfit\" relationship to the world: a disharmony between the world and the body.",
-        p3: "Disability as an experience can be the generative and restless vantage that offers everyone a wealth of undersetting of how we can form and re-form the very shapes of the contemporary world.",
-        scroll: "SCROLL DOWN FOR MORE",
-      },
-      p2: {
-        title1: "WHAT CAN",
-        title2: "A BODY DO?",
-        subTitle1: "How We",
-        subTitle2: "Meet the",
-        subTitle3: "Built World",
-        chapterTitles: ["limb", "chair", "room", "street", "clock"]
+
+  constructor(props) {
+    super(props);
+    const path = window.location.pathname;
+    let currentChapter;
+
+    if (path === "/limb") {
+      currentChapter = this.chapterPage('limb');
+      this.state = {
+        chapter: currentChapter
       }
     }
+    else if (path === "/chair") {
+      currentChapter = this.chapterPage('chair');
+      this.state = {
+        chapter: currentChapter
+      }
+    }
+    else if (path === "/room") {
+      currentChapter = this.chapterPage('room');
+      this.state = {
+        chapter: currentChapter
+      }
+    }
+    else if (path === "/street") {
+      currentChapter = this.chapterPage('street');
+      this.state = {
+        chapter: currentChapter
+      }
+    }
+    else if (path === "/clock") {
+      currentChapter = this.chapterPage('clock');
+      this.state = {
+        chapter: currentChapter
+      }
+    }
+  };
 
+  chapterPage = (chapter) => {
     const limb = {
+      page: 'limb',
       p1: {
         title: "Limb.",
         text: "Cyborg arms vs. zip ties: Finding the body's infinite adaptability and replacing the things that matter",
@@ -44,7 +65,7 @@ class App extends Component {
       },
       p4: {
         title: "Cyborg",
-        text: "With the evolution of prosthetic technology, those with these high-tech prosthetics are seen as cyborgs – flesh and automated systems operating together. However, these newer prosthetics are more evidence of an endlessly plastic and adaptive human body. The prosthetics is only a portion of who the person is. These objects are but an extension of the body that reflects the material culture and its relationship with the external world. Amputees are not half-human hybrids; they are people.",
+        text1: "With the evolution of prosthetic technology, those with these high-tech prosthetics are seen as cyborgs – flesh and automated systems operating together. However, these newer prosthetics are more evidence of an endlessly plastic and adaptive human body. The prosthetics is only a portion of who the person is. These objects are but an extension of the body that reflects the material culture and its relationship with the external world. Amputees are not half-human hybrids; they are people.",
       },
       p5: {
         title: "Seeing Disabilities",
@@ -57,6 +78,7 @@ class App extends Component {
     }
 
     const chair = {
+      page: 'chair',
       p1: {
         title: "Chair.",
         text: "From \"do-it-yourself murder\" to cardboard furniture: Is a better world designed one-for-all, or all-for-one?",
@@ -71,7 +93,7 @@ class App extends Component {
       },
       p4: {
         title: "Carboard",
-        text: "Cardboard is more than just a good material. It's a kind of philosophy. Cardboard can be seen as first-draft material but has the affordances to be a finished product. Cardboard has an experimental spirit but offers sturdy strength. When three layers are stacked together, corrugated in between in a wavelike formation, its structure becomes strong enough to hold up to 1,100 pounds per square inch. This material is a cheap and strong material that allows for creating bespoke and custom products for individual people.",
+        text1: "Cardboard is more than just a good material. It's a kind of philosophy. Cardboard can be seen as first-draft material but has the affordances to be a finished product. Cardboard has an experimental spirit but offers sturdy strength. When three layers are stacked together, corrugated in between in a wavelike formation, its structure becomes strong enough to hold up to 1,100 pounds per square inch. This material is a cheap and strong material that allows for creating bespoke and custom products for individual people.",
       },
       p5: {
         title: "Adaptive Design Association (ADA)",
@@ -84,6 +106,7 @@ class App extends Component {
     }
 
     const room = {
+      page: 'room',
       p1: {
         title: "Room.",
         text: "DeafSpace, a hospital dorm, and design that anticipates life's hardest choices. Re-thinking \"independent living.\"",
@@ -112,6 +135,7 @@ class App extends Component {
     }
 
     const street = {
+      page: 'street',
       p1: {
         title: "Street.",
         text: "Geography and desire lines: Atypical minds and bodies navigate the landscape. Making space truly common.",
@@ -126,7 +150,7 @@ class App extends Component {
       },
       p4: {
         title: "Sidewalks",
-        text: "The sidewalk stands for being in a public space; thus sidewalks pertain to the public sphere. People with disabilities saw the design of the streets as a part of their political rights—streets were initially built for working men with physically strong bodies with little to no caretaking responsibilities. However, in the 1960s, disability activists took to the streets by either mix concrete to create a smooth passage from the side to the street or smashed the concrete curb away to create a guerrilla-style cut. These acts were not just political statements, but people \"editing\" the city; they were not waiting for new architecture to be built, so they created a world that fit them by making and unmaking the inherent build world.",
+        text1: "The sidewalk stands for being in a public space; thus sidewalks pertain to the public sphere. People with disabilities saw the design of the streets as a part of their political rights—streets were initially built for working men with physically strong bodies with little to no caretaking responsibilities. However, in the 1960s, disability activists took to the streets by either mix concrete to create a smooth passage from the side to the street or smashed the concrete curb away to create a guerrilla-style cut. These acts were not just political statements, but people \"editing\" the city; they were not waiting for new architecture to be built, so they created a world that fit them by making and unmaking the inherent build world.",
       },
       p5: {
         title: "Structured Environment",
@@ -139,6 +163,7 @@ class App extends Component {
     }
 
     const clock = {
+      page: 'clock',
       p1: {
         title: "Clocks.",
         text: "Life on crip time. When the clock is the keeper of our days, what pace of life is fast enough?",
@@ -153,7 +178,7 @@ class App extends Component {
       },
       p4: {
         title: "Cultural Origins to Mathematical Units",
-        text: "Time was originally created to keep desirable life set apart by spiritual habits measured by marking the hours. \"The tools and technologies both follow, and lead, and follow again from the ideals that cultures value.\" The clock transformed from being a cultural core of marking the passing minutes to imagining time as preceding other metrics of life. It is the unit that drives how we perceive productivity, intellectuality, and disability.",
+        text1: "Time was originally created to keep desirable life set apart by spiritual habits measured by marking the hours. \"The tools and technologies both follow, and lead, and follow again from the ideals that cultures value.\" The clock transformed from being a cultural core of marking the passing minutes to imagining time as preceding other metrics of life. It is the unit that drives how we perceive productivity, intellectuality, and disability.",
       },
       p5: {
         title: "What Does the Future Look Like?",
@@ -162,6 +187,56 @@ class App extends Component {
       p6: {
         title: "How to Build the World for All of Us",
         text: " We need a world with \"a robust countervailing understanding of personhood and contribution and community in it, human values that are alive and operational outside the logic of market and its insistent clock.\" We should consider the possible design interventions that bridge the misfit between the body and the built world, not just through solutions that bring the body to become part of the norm. We need to co-create a way of life, of world-building. We should not see disabilities only as a problem to solve, but something that might \"engage our wonder, letting 'what if' questions grab and hold our attention for a moment, making us re-think what a body can do.\""
+      }
+    }
+
+    switch (chapter) {
+      case ("limb"):
+        return limb;
+
+      case ('chair'):
+        return chair;
+
+      case ('room'):
+        return room;
+
+      case ('street'):
+        return street;
+
+      case ('clock'):
+        return clock;
+
+      default:
+        window.location.refresh()
+    }
+  }
+
+  changeChapter = (chapter) => {
+    let newChapter = this.chapterPage(chapter);
+    this.setState({
+      chapter: newChapter
+    }, function () {
+      // console.log(this.state.chapter)
+    })
+  }
+
+  render = () => {
+    const home = {
+      p1: {
+        title: "WHAT CAN A BODY DO?",
+        subtitle: "How We Meet the Build World",
+        p1: "How we meet the built environment depends on both bodies and worlds. The world is built for the average person, but we are not ordinary people. We have normalized the idea of an ideal body, and anything deviant of that is less than normal.",
+        p2: "Disability results from the shape of the world's rigidly, lacking sense of what a body does or how it moves through the world. We see disability as moments when the body finds itself in \"misfit\" relationship to the world: a disharmony between the world and the body.",
+        p3: "Disability as an experience can be the generative and restless vantage that offers everyone a wealth of undersetting of how we can form and re-form the very shapes of the contemporary world.",
+        scroll: "SCROLL DOWN FOR MORE",
+      },
+      p2: {
+        title1: "WHAT CAN",
+        title2: "A BODY DO?",
+        subTitle1: "How We",
+        subTitle2: "Meet the",
+        subTitle3: "Built World",
+        chapterTitles: ["limb", "chair", "room", "street", "clock"]
       }
     }
 
@@ -177,7 +252,8 @@ class App extends Component {
           <Route path="/:chapter" render={(props) => {
             return (
               <Container>
-                <Chapters {...props} limb={limb} chair={chair} room={room} street={street} clock={clock} />
+                <ChapterNav changeChapter={this.changeChapter} />
+                <Chapters {...props} chapter={this.state.chapter} />
               </Container>
             )
           }}
@@ -187,4 +263,5 @@ class App extends Component {
     );
   }
 }
+
 export default App;

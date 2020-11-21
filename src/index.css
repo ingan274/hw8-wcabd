@@ -1,11 +1,10 @@
 :root {
   --title-size: 4.5em;
   --subtitle-size: 2.5em;
-  --body-size: 20px;
   --bold: 700;
   --demi-bold: 600;
   --reg: 500;
-  --yellow2: #F6D200;
+  --yellow: #F6D200;
 }
 
 /* RESET */
@@ -37,6 +36,7 @@ body {
   font-family: 'Poppins', 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+  font-size: 1.26em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #EBB401;
