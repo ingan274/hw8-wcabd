@@ -8,6 +8,12 @@
     --yellow2: #F6D200;
   } */
 
+.lText, .rContent {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
 .title, .subTitle {
     font-size: var(--subtitle-size);
     font-weight: var(--demi-bold);
@@ -42,4 +48,3 @@
     text-decoration: none;
     padding: .8em 0em;
 }
-

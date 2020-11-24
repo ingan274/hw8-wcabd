@@ -1,4 +1,7 @@
-import React, { Component } from "react";
+import React, { Component} from 'react';
+// import React, { useState, useEffect } from 'react';
+// import { gsap } from 'gsap';
+// import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {
   BrowserRouter as Router,
   Switch,

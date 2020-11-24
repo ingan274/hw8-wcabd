@@ -12,3 +12,15 @@
     font-size: var(--subtitle-size);
     font-weight: var(--demi-bold);
 }
+
+.chapText1 {
+    height: 90vh;
+    margin: 10vh;
+    padding: 0;
+}
+
+.chapText {
+    height: 80vh;
+    margin: 0;
+    padding: 0;
+}
