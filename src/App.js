@@ -248,7 +248,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/">
             <Container>
-              <Home home={home} />
+              <Home home={home} changeChapter={this.changeChapter} />
             </Container>
           </Route>
 

@@ -7,11 +7,18 @@
     --reg: 500;
     --yellow2: #F6D200;
   } */
+.hpage {
+    height: 100vh;
+}
 
 .lText, .rContent {
     height: 100vh;
     margin: 0;
     padding: 0;
+}
+
+.topPagePin{
+    height: 150vh;
 }
 
 .title, .subTitle {
@@ -48,3 +55,12 @@
     text-decoration: none;
     padding: .8em 0em;
 }
+
+.homeChapterLinks:hover {
+    /* text-decoration: underline; */
+    font-weight: var(--bold);
+}
+
+.mainText {
+    position: relative;
+  }
