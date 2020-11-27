@@ -57,7 +57,7 @@ const Home = (props) => {
             scrollTrigger: {
                 trigger: ".home_p1",
                 start: "top top",
-                end: "bottom 35%",
+                end: "bottom 10%",
                 pin: true,
                 scrub: true,
                 // onEnterBack: () => {p1_text()},
@@ -70,7 +70,7 @@ const Home = (props) => {
                 trigger: ".p2Trigger",
                 start: "top bottom-=100",
                 scrub: true,
-                markers: true,
+                // markers: true,
             }
         })
 

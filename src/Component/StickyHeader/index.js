@@ -1,14 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Grid, Box } from '@material-ui/core';
 import {
     NavLink
 } from "react-router-dom";
-import "./style.css"
+import "./style.scss"
+import { gsap } from "gsap";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+// import Scrollbar from 'smooth-scrollbar';
+gsap.registerPlugin(ScrollTrigger);
 
 const ChapterNav = (props) => {
+    useEffect(() => {
+        ScrollTrigger.create({
+            start: 'top -80',
+            end: 99999,
+            toggleClass: { className: 'stickyNav--scrolled', targets: '.stickyNav' }
+        });
+
+    })
+
     return (
-        <Box mt={5}>
-            <Grid container display="row" spacing={3} justify="center" >
+        <Box  pt={2} className="stickyNavContainer">
+            <Grid container direction="row" spacing={3} justify="center" alignItems="center" className="stickyNav" >
                 <Grid item >
                     <NavLink to="/limb" activeClassName='selectedChap' className='chapterNav' onClick={() => props.changeChapter('limb')}>Limb.</NavLink>
                 </Grid>
@@ -30,3 +43,4 @@ const ChapterNav = (props) => {
 }
 
 export default ChapterNav;
+
