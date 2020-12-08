@@ -27,7 +27,10 @@
     padding: 0;
 }
 
-.chapterTextContainerp1 {
+
+/* Image Classes */
+
+.chapterImageContainer {
     height: 100vh;
     margin: 0;
     padding: 0;
