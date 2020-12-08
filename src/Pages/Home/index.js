@@ -3,11 +3,16 @@ import {
     Link,
 } from "react-router-dom";
 import "./style.css";
-import { Grid, Box } from '@material-ui/core';
+import { Grid, Box, CardMedia } from '@material-ui/core';
 import { gsap } from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Scrollbar from 'smooth-scrollbar';
+import Drawing from "../../Component/Home-City";
+import img1 from "../../images/City-2.png"
+import img2 from "../../images/City-3.png"
+import img3 from "../../images/City-4.png"
 gsap.registerPlugin(ScrollTrigger);
+
 
 
 const Home = (props) => {
@@ -27,6 +32,7 @@ const Home = (props) => {
     const [chapters] = useState(props.home.p2.chapterTitles);
 
     useEffect(() => {
+
         let bodyScrollBar = Scrollbar.init(document.body, {
             damping: 0.1,
             delegateTo: document,
@@ -42,7 +48,7 @@ const Home = (props) => {
         });
         bodyScrollBar.addListener(ScrollTrigger.update);
         ScrollTrigger.defaults({ scroller: document.querySelector('.hpage') });
-
+        // L page Animations
         function p1_text() {
             gsap.from(".reveal1", { duration: 1.5, opacity: 0 });
             gsap.from(".reveal2", { delay: 0.5, duration: 2, opacity: 0 });
@@ -74,20 +80,66 @@ const Home = (props) => {
             }
         })
 
+        // R side animation
+        gsap.to('.Cityimages', {
+            scrollTrigger: {
+                trigger: ".Cityimages",
+                start: "top top",
+                end: "bottom 10%",
+                pin: true,
+                scrub: true,
+                // onEnterBack: () => {p1_text()},
+                // markers: true
+            }
+        });
+
+
+        gsap.fromTo('#city1', {
+            opacity: 1
+        }, {opacity: 0,  scrollTrigger: {
+            trigger: "#city1",
+            start: "top bottom-=60%",
+            scrub: true,
+            // markers: true,
+        }})
+
+
+        gsap.fromTo('#city2', {
+            opacity: 1
+        }, {opacity: 0,  scrollTrigger: {
+            trigger: "#city1",
+            start: "top bottom-=90%",
+            scrub: true,
+            // markers: true,
+        }})
+
+
+        gsap.fromTo('#city3', {
+            opacity: 1
+        }, {opacity: 0,  scrollTrigger: {
+            trigger: "#city1",
+            start: "top bottom-=50%",
+            scrub: true,
+            // markers: true,
+        }})
+
+
+
     })
 
     return (
+
         <Box id="main" className="main-container">
-            <Grid container direction="row" spacing={2} className="hpage">
-                <Grid item container direction="column" xs={12} md={6} className="mainText">
+            <Grid container direction="row" className="hpage">
+                <Grid item container direction="column" xs={6} md={6} className="mainText">
                     <Box className="topPagePin">
                         <Grid item container direction="column" className="introText home_p1 lText" justify="center">
                             <Box className="title reveal1">{p1Title}</Box>
                             <Box className="subTitle reveal1">{p1Subtitle}</Box>
-                            <Box className="introP reveal2" my={1}>{p1Text1}</Box>
-                            <Box className="introP reveal3" my={1}>{p1Text2}</Box>
-                            <Box className="introP reveal4 " my={1}>{p1Text3}</Box>
-                            <Box className="scroll reveal5" my={2}>{scroll}</Box>
+                            <Box className="introP reveal2" my={1} px={1}>{p1Text1}</Box>
+                            <Box className="introP reveal3" my={1} px={1}>{p1Text2}</Box>
+                            <Box className="introP reveal4 " my={1} px={1}>{p1Text3}</Box>
+                            <Box className="scroll reveal5" my={2} px={1}>{scroll}</Box>
                         </Grid>
                     </Box>
 
@@ -99,9 +151,14 @@ const Home = (props) => {
                         <Grid className="p2title title2 reveal">{p2Sub3}</Grid>
                     </Grid>
                 </Grid>
-                <Grid item xs={12} md={6} >
+                <Grid item xs={3} md={6} >
                     <Box className="topPagePin">
-                        <Box className="rContent"></Box>
+                        <Box className="rContent Cityimages">
+                            <Drawing />
+                            <CardMedia className="reveal3" id="city1" src={img1} component="img" />
+                            <CardMedia className="reveal1" id="city2" src={img2} component="img" />
+                            <CardMedia className="reveal5" id="city3" src={img3} component="img" />
+                        </Box>
                     </Box>
                     <Grid item container direction="column" align="center" justify="center" className="rContent chapterList">
                         {chapters.map((chapter, index) => (
@@ -113,10 +170,10 @@ const Home = (props) => {
                             </Link>
                         ))}
                     </Grid>
-
                 </Grid>
             </Grid>
         </Box>
+
     )
 }
 

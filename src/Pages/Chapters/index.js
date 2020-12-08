@@ -52,7 +52,7 @@ const Chapter = (props) => {
                 pin: true,
                 scrub: true,
                 // onEnterBack: () => {p1_text()},
-                markers: true
+                // markers: true
             }
         });
     }
@@ -89,65 +89,64 @@ const Chapter = (props) => {
     })
 
     return (
-        <Box key={page} className="chapterPage">
-            <Grid container direction="row" spacing={2} >
-                <Grid item container direction="column" xs={9} md={6} className="chapterPageText">
-                    {/* CHAPTER HEAD */}
-                    <Grid item container direction="column" className="chapText" justify="center">
-                        <Box item container direction="column" className="chapterTextContainerp1 p1">
-                            <Box className="chapterTitle1">{p1Title}</Box>
-                            <Box className="chapterText1 chreveal1" my={2}>{p1Text}</Box>
-                        </Box>
+            <Box key={page} className="chapterPage">
+                <Grid container direction="row" >
+                    <Grid item container direction="column" xs={9} md={6} className="chapterPageText">
+                        {/* CHAPTER HEAD */}
+                        <Grid item container direction="column" className="chapText" justify="center">
+                            <Box item container direction="column" className="chapterTextContainerp1 p1">
+                                <Box className="chapterTitle1">{p1Title}</Box>
+                                <Box className="chapterText1 chreveal1" my={2}>{p1Text}</Box>
+                            </Box>
+                        </Grid>
+
+                        {/* CHAPTER P1 */}
+                        <Grid item container direction="column" className="chapText" justify="center" >
+                            <Box className="chapterTextContainer p2">
+                                <Box className="chapterTitle">{p2Title}</Box>
+                                <Box className="chapterText" my={4}>{p2Text}</Box>
+                            </Box>
+                        </Grid>
+
+                        {/* CHAPTER P2 */}
+                        <Grid item container direction="column" className="chapText" justify="center" >
+                            <Box className="chapterTextContainer p3">
+                                <Box className="chapterTitle">{p3Title}</Box>
+                                <Box className="chapterText" my={4}>{p3Text}</Box>
+                            </Box>
+                        </Grid>
+
+                        {/* CHAPTER P3 */}
+                        <Grid item container direction="column" className="chapText" justify="center" >
+                            <Box className="chapterTextContainer p4">
+                                <Box className="chapterTitle ">{p4Title}</Box>
+                                <Box className="chapterText" my={4}>{p4Text}</Box>
+                                <Box className="chapterText" my={4}>{p4Text2}</Box>
+                            </Box>
+                        </Grid>
+
+                        {/* CHAPTER P4 */}
+                        <Grid item container direction="column" className="chapText" justify="center" >
+                            <Box className="chapterTextContainer p5">
+                                <Box className="chapterTitle">{p5Title}</Box>
+                                <Box className="chapterText" my={4}>{p5Text}</Box>
+                            </Box>
+                        </Grid>
+
+                        {/* CHAPTER P5 */}
+                        <Grid item container direction="column" className="chapText" justify="center">
+                            <Box className="chapterTextContainer p6">
+                                <Box className="chapterTitle">{p6Title}</Box>
+                                <Box className="chapterText" my={4}>{p6Text}</Box>
+                            </Box>
+                        </Grid>
                     </Grid>
 
-                    {/* CHAPTER P1 */}
-                    <Grid item container direction="column" className="chapText" justify="center" >
-                        <Box className="chapterTextContainer p2">
-                            <Box className="chapterTitle">{p2Title}</Box>
-                            <Box className="chapterText" my={4}>{p2Text}</Box>
-                        </Box>
-                    </Grid>
+                    <Grid item xs={3} md={6} >
 
-                    {/* CHAPTER P2 */}
-                    <Grid item container direction="column" className="chapText" justify="center" >
-                        <Box className="chapterTextContainer p3">
-                            <Box className="chapterTitle">{p3Title}</Box>
-                            <Box className="chapterText" my={4}>{p3Text}</Box>
-                        </Box>
-                    </Grid>
-
-                    {/* CHAPTER P3 */}
-                    <Grid item container direction="column" className="chapText" justify="center" >
-                        <Box className="chapterTextContainer p4">
-                            <Box className="chapterTitle ">{p4Title}</Box>
-                            <Box className="chapterText" my={4}>{p4Text}</Box>
-                            <Box className="chapterText" my={4}>{p4Text2}</Box>
-                        </Box>
-                    </Grid>
-
-                    {/* CHAPTER P4 */}
-                    <Grid item container direction="column" className="chapText" justify="center" >
-                        <Box className="chapterTextContainer p5">
-                            <Box className="chapterTitle">{p5Title}</Box>
-                            <Box className="chapterText" my={4}>{p5Text}</Box>
-                        </Box>
-                    </Grid>
-
-                    {/* CHAPTER P5 */}
-                    <Grid item container direction="column" className="chapText" justify="center">
-                        <Box className="chapterTextContainer p6">
-                            <Box className="chapterTitle">{p6Title}</Box>
-                            <Box className="chapterText" my={4}>{p6Text}</Box>
-                        </Box>
                     </Grid>
                 </Grid>
-
-                <Grid item xs={3} md={6} >
-
-                </Grid>
-            </Grid>
-
-        </Box>
+            </Box>
     )
 
 }

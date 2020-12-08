@@ -64,3 +64,40 @@
 .mainText {
     position: relative;
   }
+
+  /* Image Styling */
+.svgImage {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: -10%;
+}
+
+.rContent {
+    position: relative;
+    width: 100%;
+}
+
+#city1 {
+    z-index: 2;
+    position: absolute;
+    width: 30%;
+    bottom: 25%;
+}
+
+#city2 {
+    width: 40%;
+    z-index: 2;
+    position: absolute;
+    right: 3%;
+    top: 13.8%;
+   
+}
+
+#city3 {
+    z-index: 3;
+    position: absolute;
+    width: 30%;
+    right: 2%;
+    bottom: 25%;
+}

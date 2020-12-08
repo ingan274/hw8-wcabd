@@ -21,13 +21,13 @@
     background-image: linear-gradient(rgba(235, 180, 1, 1), rgba(235, 180, 1, .2));
     // background-image: linear-gradient(black, grey);
     position: fixed;
-    z-index: 3;
-    height: 12vh;
+    z-index: 6;
+    height: 10vh;
     width: 100%;
     top: 0;
     left: 0;
-    transition: ease 2s;
-    &--scrolled {
-      height: 5vh;
-    }
+    // transition: ease 2s;
+    // &--scrolled {
+    //   height: 5vh;
+    // }
 }
