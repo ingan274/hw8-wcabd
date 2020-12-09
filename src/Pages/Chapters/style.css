@@ -17,9 +17,11 @@
     height: 98vh;
 }
 
-.chapText {
+.chapText, .chapImage {
     height: 150vh;
 }
+
+
 
 .chapterTextContainer {
     height: 100vh;
