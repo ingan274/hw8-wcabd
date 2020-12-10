@@ -3,14 +3,11 @@ import {
     Link,
 } from "react-router-dom";
 import "./style.css";
-import { Grid, Box, CardMedia } from '@material-ui/core';
+import { Grid, Box } from '@material-ui/core';
 import { gsap } from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Scrollbar from 'smooth-scrollbar';
 import Drawing from "../../Component/Home-City";
-import img1 from "../../images/City-2.png"
-import img2 from "../../images/City-3.png"
-import img3 from "../../images/City-4.png"
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -84,7 +81,7 @@ const Home = (props) => {
         gsap.to('.Cityimages', {
             scrollTrigger: {
                 trigger: ".Cityimages",
-                start: "top top",
+                start: "top top+=15%",
                 end: "bottom 10%",
                 pin: true,
                 scrub: true,
@@ -97,10 +94,11 @@ const Home = (props) => {
         gsap.fromTo('#city1', {
             opacity: 1
         }, {opacity: 0,  scrollTrigger: {
-            trigger: "#city1",
-            start: "top bottom-=60%",
+            trigger: ".scroll",
+            start: "top+=50% top+=60%",
+            end: "bottom  40%",
             scrub: true,
-            // markers: true,
+            markers: true,
         }})
 
 
@@ -154,10 +152,7 @@ const Home = (props) => {
                 <Grid item xs={3} md={6} >
                     <Box className="topPagePin">
                         <Box className="rContent Cityimages">
-                            <Drawing />
-                            <CardMedia className="reveal3" id="city1" src={img1} component="img" />
-                            <CardMedia className="reveal1" id="city2" src={img2} component="img" />
-                            <CardMedia className="reveal5" id="city3" src={img3} component="img" />
+                            <Box id="homeCity"><Drawing /></Box>
                         </Box>
                     </Box>
                     <Grid item container direction="column" align="center" justify="center" className="rContent chapterList">
