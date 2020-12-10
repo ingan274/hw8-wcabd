@@ -12,6 +12,24 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Limb = (props) => {
 
+        // Reusable Fade In Function
+        function fadeIn(element, trigger, distance) {
+            let tlFadeIn = gsap.timeline({ paused: true });
+            tlFadeIn.to(`${element}`, {
+                opacity: 1,
+                ease: 'power1',
+            })
+    
+            ScrollTrigger.create({
+                trigger: `${trigger}`,
+                start: `top bottom-=${distance}%`,
+                scrub: true,
+                onEnter: () => tlFadeIn.play(),
+                onLeaveBack: () => tlFadeIn.reverse(),
+                // markers: true,
+            })
+        };
+
     // Pin Animation
     function pinAnimation(element, top, bottom) {
         gsap.to(`${element}`, {
@@ -214,77 +232,11 @@ const Limb = (props) => {
         p4FadeInOut('#lp42', 30)
 
         // Page 5 and 6 Animations
-
-        const tlFadeInBaseSide = gsap.timeline({ paused: true });
-        tlFadeInBaseSide.to("#blur-sides", {
-            opacity: 1,
-            ease: 'power1',
-        })
-        const tlFadeInBaseCenter = gsap.timeline({ paused: true });
-        tlFadeInBaseCenter.to("#blur-body", {
-            opacity: 1,
-            ease: 'power1',
-        })
-
-        ScrollTrigger.create({
-            trigger: ".lLast",
-            start: `top top+=30%`,
-            scrub: true,
-            onEnter: () => tlFadeInBaseCenter.play(),
-            onLeaveBack: () => tlFadeInBaseCenter.reverse(),
-            // markers: true,
-        })
-
-
-        ScrollTrigger.create({
-            trigger: ".lLast",
-            start: `top top+=10%`,
-            scrub: true,
-            onEnter: () => tlFadeInBaseSide.play(),
-            onLeaveBack: () => tlFadeInBaseSide.reverse(),
-            // markers: true,
-        })
-
-        const tllp6pic1 = gsap.timeline({ paused: true });
-        tllp6pic1.to("#lp61", {
-            opacity: 1,
-            ease: 'power1',
-        })
-        const tlp6pic2 = gsap.timeline({ paused: true });
-        tlp6pic2.to("#lp62", {
-            opacity: 1,
-            ease: 'power1',
-        })
-        const tlp6pic3 = gsap.timeline({ paused: true });
-        tlp6pic3.to("#lp63", {
-            opacity: 1,
-            ease: 'power1',
-        })
-
-        ScrollTrigger.create({
-            trigger: ".p6Title",
-            start: `top top+=80%`,
-            scrub: true,
-            onEnter: () => tllp6pic1.play(),
-            // markers: true,
-        })
-
-        ScrollTrigger.create({
-            trigger: ".p6Title",
-            start: `top top+=70%`,
-            scrub: true,
-            onEnter: () => tlp6pic2.play(),
-            // markers: true,
-        })
-
-        ScrollTrigger.create({
-            trigger: ".p6Title",
-            start: `top top+=60%`,
-            scrub: true,
-            onEnter: () => tlp6pic3.play(),
-            // markers: true,
-        })
-
+        fadeIn("#blur-sides", ".lLast", 80)
+        fadeIn("#blur-body", ".lLast", 78)
+        fadeIn("#lp61", ".p6Title", 80)
+        fadeIn("#lp62", ".p6Title", 70)
+        fadeIn("#lp63", ".p6Title", 60)
     })
 
     return (

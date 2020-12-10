@@ -109,7 +109,7 @@ const Chapter = (props) => {
                     <Grid item container direction="column" className="chapText" justify="center">
                         <Box item="true" container direction="column" className="chapterTextContainer p1">
                             <Box className="chapterTitle1 p1Title">{p1Title}</Box>
-                            <Box className="chapterText1 chreveal1 p1Text" py={2}>{p1Text}</Box>
+                            <Box className="chapterText1 chreveal1 p1Text" py={2} pr={3}>{p1Text}</Box>
                         </Box>
                     </Grid>
 
@@ -117,7 +117,7 @@ const Chapter = (props) => {
                     <Grid item container direction="column" className="chapText" justify="center" >
                         <Box className="chapterTextContainer p2">
                             <Box className="chapterTitle p2Title">{p2Title}</Box>
-                            <Box className="chapterText p2Text" py={3}>{p2Text}</Box>
+                            <Box className="chapterText p2Text" py={3} >{p2Text}</Box>
                         </Box>
                     </Grid>
 
@@ -133,7 +133,7 @@ const Chapter = (props) => {
                     <Grid item container direction="column" className="chapText" justify="center" >
                         <Box className="chapterTextContainer p4">
                             <Box className="chapterTitle p4Title">{p4Title}</Box>
-                            <Box className="chapterText" py={3}>{p4Text}</Box>
+                            <Box className="chapterText p4Text" py={3}>{p4Text}</Box>
                             <Box className="chapterText" py={3}>{p4Text2}</Box>
                         </Box>
                     </Grid>
@@ -142,15 +142,15 @@ const Chapter = (props) => {
                     <Grid item container direction="column" className="chapText" justify="center" >
                         <Box className="chapterTextContainer p5">
                             <Box className="chapterTitle p5Title">{p5Title}</Box>
-                            <Box className="chapterText" py={3}>{p5Text}</Box>
+                            <Box className="chapterText p5Text" py={3}>{p5Text}</Box>
                         </Box>
                     </Grid>
 
                     {/* CHAPTER P5 */}
-                    <Grid item container direction="column" className="chapText" justify="end">
+                    <Grid item container direction="column" className="chapText" justify="center">
                         <Box className="chapterTextContainer p6">
                             <Box className="chapterTitle p6Title">{p6Title}</Box>
-                            <Box className="chapterText" py={3}>{p6Text}</Box>
+                            <Box className="chapterText p6Text" py={3}>{p6Text}</Box>
                         </Box>
                     </Grid>
                 </Grid>

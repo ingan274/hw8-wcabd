@@ -98,7 +98,7 @@ const Home = (props) => {
             start: "top+=50% top+=60%",
             end: "bottom  40%",
             scrub: true,
-            markers: true,
+            // markers: true,
         }})
 
 

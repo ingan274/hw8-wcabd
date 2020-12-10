@@ -10,3 +10,13 @@
     height: 100%;
     margin: 0 auto;
 }
+
+#chair3 {
+    width: 95%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.cp2, .cp3, .cp4, .ada, .cp6 {
+    opacity: 0;
+}

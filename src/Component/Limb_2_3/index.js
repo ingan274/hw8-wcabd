@@ -13,7 +13,7 @@ class LimbBody extends Component {
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 890 1000">
                 <defs>
                     <clipPath id="clip-path">
-                        <polygon class="cls-1" points="1347.497 540.112 1295.963 724.95 1240.74 841.371 1236.937 886.454 1387.216 899.129 1417.001 545.974 1347.497 540.112" />
+                        <polygon className="cls-1" points="1347.497 540.112 1295.963 724.95 1240.74 841.371 1236.937 886.454 1387.216 899.129 1417.001 545.974 1347.497 540.112" />
                     </clipPath>
                 </defs>
                 <g id="Body">
