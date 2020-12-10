@@ -1,0 +1,12 @@
+/* Page 1 */
+#chair1 {
+    width: 90%;
+    height: 100%;
+}
+
+/* Page 2 */
+#chair2 {
+    width: 95%;
+    height: 100%;
+    margin: 0 auto;
+}

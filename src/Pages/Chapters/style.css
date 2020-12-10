@@ -14,7 +14,7 @@
 }
 
 .chapterPage {
-    height: 98vh;
+    height: 97vh;
 }
 
 .chapText, .chapImage {
@@ -23,16 +23,7 @@
 
 
 
-.chapterTextContainer {
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-}
-
-
-/* Image Classes */
-
-.chapterImageContainer {
+.chapterTextContainer, .chapterImageContainer  {
     height: 100vh;
     margin: 0;
     padding: 0;

@@ -2,6 +2,7 @@ import "./style.css";
 import React, { useState, useEffect } from "react";
 
 import Limb from "../../RightImages/Limb";
+import Chair from "../../RightImages/Chair";
 
 import { Grid, Box } from '@material-ui/core';
 import { gsap } from "gsap";
@@ -25,6 +26,15 @@ const Chapter = (props) => {
     let [p5Text, setp5Text] = useState(props.chapter.p5.text);
     let [p6Title, setp6Title] = useState(props.chapter.p6.title);
     let [p6Text, setp6Text] = useState(props.chapter.p6.text);
+
+    const pageImages = () => {
+        if (page === "limb") {
+            return <Limb />
+        }
+        else if (page === "chair") {
+            return <Chair />
+        }
+    }
 
     useEffect(() => {
         // This allows for when the props change, the states will also change
@@ -98,8 +108,8 @@ const Chapter = (props) => {
                     {/* CHAPTER HEAD */}
                     <Grid item container direction="column" className="chapText" justify="center">
                         <Box item="true" container direction="column" className="chapterTextContainer p1">
-                            <Box className="chapterTitle1">{p1Title}</Box>
-                            <Box className="chapterText1 chreveal1" py={2}>{p1Text}</Box>
+                            <Box className="chapterTitle1 p1Title">{p1Title}</Box>
+                            <Box className="chapterText1 chreveal1 p1Text" py={2}>{p1Text}</Box>
                         </Box>
                     </Grid>
 
@@ -137,7 +147,7 @@ const Chapter = (props) => {
                     </Grid>
 
                     {/* CHAPTER P5 */}
-                    <Grid item container direction="column" className="chapText" justify="center">
+                    <Grid item container direction="column" className="chapText" justify="end">
                         <Box className="chapterTextContainer p6">
                             <Box className="chapterTitle p6Title">{p6Title}</Box>
                             <Box className="chapterText" py={3}>{p6Text}</Box>
@@ -145,7 +155,7 @@ const Chapter = (props) => {
                     </Grid>
                 </Grid>
                 {/* Images go here */}
-                <Limb />
+                {pageImages()}
             </Grid>
         </Box>
     )

@@ -1,27 +1,31 @@
 import React, { useEffect } from "react";
-import { Grid, Box, CardMedia } from '@material-ui/core';
+import { Grid, Box } from '@material-ui/core';
 import { gsap } from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Scrollbar from 'smooth-scrollbar';
 import "./style.css";
 import Imagep1 from "../../Component/Limb_1";
-import Imagep2 from "../../Component/LimbBody";
-import p2limb1 from "../../images/limb2-1.1.png" //armL 4
-import p2limb2 from "../../images/limb2-1.2.png" //leg 1
-import p2limb3 from "../../images/limb2-1.3.png" //head 2
-import p2limb4 from "../../images/limb2-1.png" //armR 3
-import p3limb1 from "../../images/limb2-1_1.png";
-import p3limb2 from "../../images/limb2-2.png";
-import p3limb3 from "../../images/limb2-3.png";
-import p4limb1 from "../../images/limb3-1.png";
-import p4limb2 from "../../images/limb3-2.png";
-import Page5Back from "../../Component/Limb_5";
-import p6limb1 from "../../images/limb6-1.png";
-import p6limb2 from "../../images/limb6-2.png";
-import p6limb3 from "../../images/limb6-3.png";
+import Imagep23 from "../../Component/Limb_2_3";
+import Imagep4 from "../../Component/Limb_4";
+import Imagep56 from "../../Component/Limb_5_6";
 gsap.registerPlugin(ScrollTrigger);
 
 const Limb = (props) => {
+
+    // Pin Animation
+    function pinAnimation(element, top, bottom) {
+        gsap.to(`${element}`, {
+            scrollTrigger: {
+                trigger: `${element}`,
+                start: `top-=${top}%`,
+                end: `bottom ${bottom}%`,
+                pin: true,
+                scrub: true,
+                // markers: true
+            }
+        });
+    }
+
     // Page 1 Animation Function
     function p1FadeOut(element) {
         gsap.fromTo(`${element}`, {
@@ -29,7 +33,8 @@ const Limb = (props) => {
         }, {
             opacity: 0, scrollTrigger: {
                 trigger: "#l1Hand",
-                start: "top top+=5%",
+                start: "top+=120% top+=10%",
+                end: "bottom+=250%",
                 scrub: true,
                 // markers: true,
             }
@@ -52,7 +57,7 @@ const Limb = (props) => {
 
         ScrollTrigger.create({
             trigger: ".p2Title",
-            start: `top bottom-=${distance}%`,
+            start: `top top+=${distance}%`,
             scrub: true,
             onEnter: () => tlFadeIn.play(),
             onLeaveBack: () => tlFadeIn.reverse(),
@@ -61,7 +66,7 @@ const Limb = (props) => {
 
         ScrollTrigger.create({
             trigger: ".p2Title",
-            start: "top top-=14.3%",
+            start: "bottom top-=60%",
             scrub: true,
             onEnter: () => tlFadeOut.play(),
             onLeaveBack: () => tlFadeOut.reverse(),
@@ -72,8 +77,8 @@ const Limb = (props) => {
     function p2FadeInBody(element) {
         gsap.from(`${element}`, {
             opacity: 0, scrollTrigger: {
-                trigger: ".p2Title",
-                start: `top bottom+=20%`,
+                trigger: "#limbBody1",
+                start: "top+=80% bottom-=80%",
                 scrub: true,
                 // markers: true,
             }
@@ -90,7 +95,7 @@ const Limb = (props) => {
 
         ScrollTrigger.create({
             trigger: ".p3Title",
-            start: `top bottom-=${distance}%`,
+            start: `top top+=${distance}%`,
             scrub: true,
             onEnter: () => tlFadeIn.play(),
             onLeaveBack: () => tlFadeIn.reverse(),
@@ -132,8 +137,8 @@ const Limb = (props) => {
         })
 
         ScrollTrigger.create({
-            trigger: ".p4Title",
-            start: `top bottom-=${distance}%`,
+            trigger: ".p4",
+            start: `top top+=${distance}%`,
             scrub: true,
             onEnter: () => tlFadeIn.play(),
             onLeaveBack: () => tlFadeIn.reverse(),
@@ -141,8 +146,8 @@ const Limb = (props) => {
         })
 
         ScrollTrigger.create({
-            trigger: ".p4Title",
-            start: "top top-=60%",
+            trigger: ".p4",
+            start: "bottom 80%",
             scrub: true,
             onEnter: () => tlFadeOut.play(),
             onLeaveBack: () => tlFadeOut.reverse(),
@@ -176,138 +181,131 @@ const Limb = (props) => {
         ScrollTrigger.defaults({ scroller: document.querySelector('.chapterPage') });
 
 
+        //  Initial pinning
+        pinAnimation(".imagePin_limb3", 1, 80)
+        pinAnimation(".limbPart4", 5, 30)
+        pinAnimation(".lLast", 1, 0)
         // Page 1 animations
-        gsap.to('.imagePin_limb3', {
-            scrollTrigger: {
-                trigger: ".imagePin_limb3",
-                start: "top top",
-                end: "bottom 10%",
-                pin: true,
-                scrub: true,
-                // markers: true
-            }
-        });
-
         p1FadeOut("#limbp1-arm");
         p1FadeOut("#limbBody1");
 
         // Page 2 animations
         // Fade in animations!!
         p2FadeInBody('#limbBody2');
-        p2FadeInOut('#army1', 20);
-        p2FadeInOut('#army2', 10);
-        p2FadeInOut('#army3', 5);
-        p2FadeInOut('#army4', 15);
+        p2FadeInOut('#army1', 60);
+        p2FadeInOut('#army2', 15);
+        p2FadeInOut('#army3', 30);
+        p2FadeInOut('#army4', 80);
 
         // Page 3 Animations
-        p3FadeIn('#evolution1', 10);
-        p3FadeOut('#evolution1', 80);
+        p3FadeIn('#prosth1', 60);
+        p3FadeOut('#prosth1', 45);
 
-        p3FadeIn('#evolution2', 40);
-        p3FadeOut('#evolution2', 38);
+        p3FadeIn('#prosth2', 40);
+        p3FadeOut('#prosth2', 25);
 
-        p3FadeIn('#evolution3', 90);
+        p3FadeIn('#prosth3', 20);
+
+        p3FadeOut('#prosth3', .5);
+        p3FadeOut('#limbBody2', .5);
 
         // Page 4 Animations
-        gsap.to('.limbPart4', {
-            scrollTrigger: {
-                trigger: ".limbPart4",
-                start: "top top",
-                end: "bottom 60%",
-                pin: true,
-                scrub: true,
-                // markers: true
-            }
-        });
-
-        p4FadeInOut('#cyborg1', 80);
-        p4FadeInOut('#cyborg2', 100);
+        p4FadeInOut('#lp41', 80)
+        p4FadeInOut('#lp42', 30)
 
         // Page 5 and 6 Animations
-        gsap.to('#limbPart56', {
-            scrollTrigger: {
-                trigger: "#limbPart56",
-                start: "top top",
-                end: "bottom -79.5%",
-                pin: true,
-                scrub: true,
-                // markers: true
-            }
-        });
 
-        gsap.from('#limb56', {
-            opacity: 0, scrollTrigger: {
-                trigger: ".p5Title",
-                start: "top bottom-=50%",
-                scrub: true,
-                // markers: true,
-            }
+        const tlFadeInBaseSide = gsap.timeline({ paused: true });
+        tlFadeInBaseSide.to("#blur-sides", {
+            opacity: 1,
+            ease: 'power1',
+        })
+        const tlFadeInBaseCenter = gsap.timeline({ paused: true });
+        tlFadeInBaseCenter.to("#blur-body", {
+            opacity: 1,
+            ease: 'power1',
         })
 
-        gsap.from('#limbp61', {
-            opacity: 0, scrollTrigger: {
-                trigger: ".p6Title",
-                start: "top bottom-=40%",
-                scrub: true,
-                // markers: true,
-            }
+        ScrollTrigger.create({
+            trigger: ".lLast",
+            start: `top top+=30%`,
+            scrub: true,
+            onEnter: () => tlFadeInBaseCenter.play(),
+            onLeaveBack: () => tlFadeInBaseCenter.reverse(),
+            // markers: true,
         })
 
-        gsap.from('#limbp62', {
-            opacity: 0, scrollTrigger: {
-                trigger: ".p6Title",
-                start: "top bottom-=60%",
-                scrub: true,
-                // markers: true,
-            }
+
+        ScrollTrigger.create({
+            trigger: ".lLast",
+            start: `top top+=10%`,
+            scrub: true,
+            onEnter: () => tlFadeInBaseSide.play(),
+            onLeaveBack: () => tlFadeInBaseSide.reverse(),
+            // markers: true,
         })
 
-        gsap.from('#limbp63', {
-            opacity: 0, scrollTrigger: {
-                trigger: ".p6Title",
-                start: "top bottom-=70%",
-                scrub: true,
-                // markers: true,
-            }
+        const tllp6pic1 = gsap.timeline({ paused: true });
+        tllp6pic1.to("#lp61", {
+            opacity: 1,
+            ease: 'power1',
+        })
+        const tlp6pic2 = gsap.timeline({ paused: true });
+        tlp6pic2.to("#lp62", {
+            opacity: 1,
+            ease: 'power1',
+        })
+        const tlp6pic3 = gsap.timeline({ paused: true });
+        tlp6pic3.to("#lp63", {
+            opacity: 1,
+            ease: 'power1',
+        })
+
+        ScrollTrigger.create({
+            trigger: ".p6Title",
+            start: `top top+=80%`,
+            scrub: true,
+            onEnter: () => tllp6pic1.play(),
+            // markers: true,
+        })
+
+        ScrollTrigger.create({
+            trigger: ".p6Title",
+            start: `top top+=70%`,
+            scrub: true,
+            onEnter: () => tlp6pic2.play(),
+            // markers: true,
+        })
+
+        ScrollTrigger.create({
+            trigger: ".p6Title",
+            start: `top top+=60%`,
+            scrub: true,
+            onEnter: () => tlp6pic3.play(),
+            // markers: true,
         })
 
     })
 
     return (
         <Grid item container direction="column" xs={12} md={6} className="chapterImages">
-            <Box className="p3Top3">
-                <Box className="chapImage">
-                    {/* Page 1, 2, and 3 */}
-                    <Box item="true" className="imagePin_limb3 p1_2_3">
-                        {/* Page 1 */}
-                        <Box id="limbBody1"><Imagep1 /></Box>
-                        {/* Page 2 */}
-                        <Box id="limbBody2"><Imagep2 /></Box>
 
-                        <CardMedia className="limb2" id="army1" src={p2limb1} component="img" />
-                        <CardMedia className="limb2" id="army2" src={p2limb2} component="img" />
-                        <CardMedia className="limb2" id="army3" src={p2limb3} component="img" />
-                        <CardMedia className="limb2" id="army4" src={p2limb4} component="img" />
-                        {/* Page 3 */}
-                        <CardMedia className="limb3" id="evolution1" src={p3limb1} component="img" />
-                        <CardMedia className="limb3" id="evolution2" src={p3limb2} component="img" />
-                        <CardMedia className="limb3" id="evolution3" src={p3limb3} component="img" />
-                    </Box>
-                </Box>
+            {/* Page 1, 2, and 3 */}
+            <Box item="true" className="imagePin_limb3">
+                {/* Page 1 */}
+                <Box id="limbBody1"><Imagep1 /></Box>
+                {/* Page 2 and 3 */}
+                <Box id="limbBody23"><Imagep23 /></Box>
             </Box>
             {/* Page 4 */}
-            <Box item="true" className="chapterImageContainer limbPart4">
-                <CardMedia className="limb4" id="cyborg1" src={p4limb1} component="img" />
-                <CardMedia className="limb4" id="cyborg2" src={p4limb2} component="img" />
-            </Box>
-
+            <Grid item container direction="column" className="chapImage" >
+                <Box item="true" className="chapterImageContainer limbPart4">
+                    <Box id="limbBody4"><Imagep4 /></Box>
+                </Box>
+            </Grid>
             {/* Page 5 and 6 */}
-            <Box item="true" className="chapterImageContainer lLast" id='limbPart56'>
-                <Box id="limb56"><Page5Back /></Box>
-                {/* Page 6 */}
-                <CardMedia className="limb6" id="limbp61" src={p6limb1} component="img" />
-                <CardMedia className="limb6" id="limbp62" src={p6limb2} component="img" />
-                <CardMedia className="limb6" id="limbp63" src={p6limb3} component="img" />
+            <Box item="true" className="lLast">
+                <Box id="limbBody56"><Imagep56 /></Box>
             </Box>
 
 
