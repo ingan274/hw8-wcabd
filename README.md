@@ -2,7 +2,7 @@
 ### By Sara Hendren
 <br/>
 
-#### Live Link: whatcanabodydo.netlify.app
+#### <a href="whatcanabodydo.netlify.app" > Live Link </a>
 
 <br/>
 I was inspired by the animations and data visualizations of <a href="https://www.thinkwithgoogle.com/feature/ml-fairness-for-marketers/"> “Think with Google” machine leaning page </a> that explore how 44 people talk about bias. I wanted to break apart Sara Hendren’s book “What Can a Dody Do?” and pull key quotes and information to visually illustrate her key point of every chapter. 
