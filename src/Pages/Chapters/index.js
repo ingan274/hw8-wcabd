@@ -79,7 +79,7 @@ const Chapter = (props) => {
         // Animations of the first Page if page has changed
         gsap.from(".chreveal1", { delay: 0.5, duration: 2, opacity: 0 });
     }, [page])
-
+s
     useEffect(() => {
         // Pin Animation for sections
         let bodyScrollBar = Scrollbar.init(document.querySelector('.chapterPage'), {
