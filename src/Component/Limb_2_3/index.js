@@ -1,10 +1,10 @@
 
 import React, { Component } from "react";
 import "./style.css"
-import army1 from "../../Images/limb2-1.1.png"
-import army2 from "../../Images/limb2-1.2.png"
-import army3 from "../../Images/limb2-1.3.png"
-import army4 from "../../Images/limb2-1.png"
+import army1 from "../../images/limb2-1.1.png"
+import army2 from "../../images/limb2-1.2.png"
+import army3 from "../../images/limb2-1.3.png"
+import army4 from "../../images/limb2-1.png"
 
 class LimbBody extends Component {
 

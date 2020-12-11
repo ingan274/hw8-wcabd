@@ -17,6 +17,10 @@
     padding: 0;
 }
 
+.lText {
+    padding-left: 5em;
+}
+
 .topPagePin{
     height: 185vh;
 }

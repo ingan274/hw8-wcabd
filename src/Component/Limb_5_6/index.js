@@ -1,8 +1,8 @@
 import React from "react";
 import "./style.css"
-import image1 from "../../Images/limb6-1.png"
-import image2 from "../../Images/limb6-2.png"
-import image3 from "../../Images/limb6-3.png"
+import image1 from "../../images/limb6-1.png"
+import image2 from "../../images/limb6-2.png"
+import image3 from "../../images/limb6-3.png"
 
 const Limb5 = () => {
   return (

@@ -1,8 +1,8 @@
 import React from "react";
-import img1 from "../../Images/chair3-1.png";
-import img2 from "../../Images/chair3-2.png";
-import img3 from "../../Images/chair3-3.png";
-import img4 from "../../Images/chair3-4.png";
+import img1 from "../../images/chair3-1.png";
+import img2 from "../../images/chair3-2.png";
+import img3 from "../../images/chair3-3.png";
+import img4 from "../../images/chair3-4.png";
 
 const Chair3 = () => {
     return (

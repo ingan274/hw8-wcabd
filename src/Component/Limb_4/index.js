@@ -1,6 +1,6 @@
 import React from "react";
-import image1 from "../../Images/limb3-1.png"
-import  image2 from "../../Images/limb3-2.png"
+import image1 from "../../images/limb3-1.png"
+import  image2 from "../../images/limb3-2.png"
 
 const Limb4 = () => {
   return (
