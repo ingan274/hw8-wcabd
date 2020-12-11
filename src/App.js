@@ -256,8 +256,8 @@ class App extends Component {
             return (
               <div>
 
+                <ChapterNav changeChapter={this.changeChapter} />
                 <Container>
-                  <ChapterNav changeChapter={this.changeChapter} />
                   <Chapters {...props} chapter={this.state.chapter} />
                 </Container>
               </div>

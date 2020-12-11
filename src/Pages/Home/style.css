@@ -7,9 +7,6 @@
     --reg: 500;
     --yellow2: #F6D200;
   } */
-.hpage {
-    height: 100vh;
-}
 
 .lText, .rContent {
     height: 100vh;
@@ -21,9 +18,9 @@
     padding-left: 5em;
 }
 
-.topPagePin{
+/* .topPagePin{
     height: 185vh;
-}
+} */
 
 .title, .subTitle {
     font-size: var(--subtitle-size);
@@ -65,18 +62,10 @@
     font-weight: var(--bold);
 }
 
-.mainText {
-    position: relative;
-  }
 
   /* Image Styling */
 #homeCity {
     width: 100%;
-    height: 100%;
     /* position: absolute; */
-}
-
-.rContent {
-    position: relative;
-    width: 100%;
+    padding-top: 5em;
 }
