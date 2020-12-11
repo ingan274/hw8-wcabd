@@ -1,4 +1,4 @@
-import React, { Component} from 'react';
+import React, { Component } from 'react';
 // import React, { useState, useEffect } from 'react';
 // import { gsap } from 'gsap';
 // import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -254,10 +254,12 @@ class App extends Component {
 
           <Route path="/:chapter" render={(props) => {
             return (
-              <Container>
+              <div>
                 <ChapterNav changeChapter={this.changeChapter} />
-                <Chapters {...props} chapter={this.state.chapter} />
-              </Container>
+                <Container>
+                  <Chapters {...props} chapter={this.state.chapter} />
+                </Container>
+              </div>
             )
           }}
           />
