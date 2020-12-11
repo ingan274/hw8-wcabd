@@ -34,7 +34,7 @@ const Home = (props) => {
 
     useEffect(() => {
 
-        let bodyScrollBar = Scrollbar.init(document.querySelector(".main-container"), {
+        let bodyScrollBar = Scrollbar.init(document.body, {
             damping: 0.1,
             delegateTo: document,
             continuousScrolling: false,

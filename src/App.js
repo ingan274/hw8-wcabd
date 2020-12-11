@@ -255,8 +255,9 @@ class App extends Component {
           <Route path="/:chapter" render={(props) => {
             return (
               <div>
-                <ChapterNav changeChapter={this.changeChapter} />
+
                 <Container>
+                  <ChapterNav changeChapter={this.changeChapter} />
                   <Chapters {...props} chapter={this.state.chapter} />
                 </Container>
               </div>

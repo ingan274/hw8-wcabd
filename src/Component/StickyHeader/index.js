@@ -12,11 +12,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 const ChapterNav = (props) => {
     useEffect(() => {
-        // ScrollTrigger.create({
-        //     start: 'top -100',
-        //     end: 99999,
-        //     toggleClass: { className: 'stickyNav--scrolled', targets: '.stickyNav' }
-        // });
+        ScrollTrigger.create({
+            start: 'top -100',
+            end: 99999,
+            toggleClass: { className: 'stickyNav--scrolled', targets: '.stickyNav' }
+        });
     })
 
     return (
