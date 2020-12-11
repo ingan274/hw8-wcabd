@@ -100,7 +100,7 @@ const Chair = (props) => {
     // Implementing animations
     useEffect(() => {
         // scroll bar standard code to start
-        let bodyScrollBar = Scrollbar.init(document.querySelector("#container"), {
+        let bodyScrollBar = Scrollbar.init(document.querySelector('#container'), {
             damping: 0.1,
             delegateTo: document,
             // syncCallbacks: true,
