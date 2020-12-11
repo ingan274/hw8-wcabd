@@ -82,7 +82,7 @@ const Chapter = (props) => {
 
     useEffect(() => {
         // Pin Animation for sections
-        let bodyScrollBar = Scrollbar.init(document.body, {
+        let bodyScrollBar = Scrollbar.init(document.querySelector('.chapterPage'), {
             damping: 0.1,
             delegateTo: document,
             // syncCallbacks: true,

@@ -186,7 +186,7 @@ const Limb = (props) => {
         // Page 2 timeline
 
         // scroll bar standard code to start
-        let bodyScrollBar = Scrollbar.init(document.body, {
+        let bodyScrollBar = Scrollbar.init(document.querySelector('.chapterPage'), {
             damping: 0.1,
             delegateTo: document,
             // syncCallbacks: true,
