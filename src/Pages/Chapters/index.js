@@ -1,16 +1,18 @@
-import "./style.css";
-import "./style_812-1024.css";
-import "./style_668-812.css";
-import "./style_375-667.css";
 import React, { useState, useEffect } from "react";
-
-import Limb from "../../RightImages/Limb";
-import Chair from "../../RightImages/Chair";
-
 import { Grid, Box } from '@material-ui/core';
 import { gsap } from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Scrollbar from 'smooth-scrollbar';
+
+// Style Sheets
+import "./style.css";
+import "./style_812-1024.css";
+import "./style_668-812.css";
+import "./style_375-667.css";
+
+// Image compnents
+import Limb from "../../RightImages/Limb";
+import Chair from "../../RightImages/Chair";
 gsap.registerPlugin(ScrollTrigger);
 
 

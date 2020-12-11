@@ -1,6 +1,6 @@
 import React from "react";
 import './style.css';
-import cardboard from "../../Images/chair4.png";
+import cardboard from "../../Images/chair4.png"
 
 
 const Chair4 = () => {

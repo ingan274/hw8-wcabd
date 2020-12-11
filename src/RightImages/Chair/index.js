@@ -210,7 +210,7 @@ const Chair = (props) => {
             {/* CHAPTER P2 */}
             <Grid item container direction="column" className="chapImage">
                 <Box item="true" container="true" direction="column" className="chapterImageContainer chairp3">
-                    <Box id="chair4"><P3svg /></Box>
+                    <Box id="chair3"><P3svg /></Box>
                 </Box>
             </Grid>
 
