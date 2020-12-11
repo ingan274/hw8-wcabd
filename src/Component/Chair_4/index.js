@@ -1,6 +1,7 @@
 import React from "react";
-import image1 from "../../Images/chair4.png";
 import './style.css';
+import cardboard from "../../Images/chair4.png";
+
 
 const Chair4 = () => {
     return (
@@ -11,7 +12,7 @@ const Chair4 = () => {
                 </clipPath>
             </defs>
             <g>
-                <image id="cardboard" transform="translate(175.724 436.288)" href={image1} />
+                <image id="cardboard" transform="translate(175.724 436.288)" href={cardboard} />
                 <g id="fallingweight">
                     <g className="cp4" id="weight">
                         <path class="chair4-3" d="M282.305,316.009c34.05-43.809,58.825-62.12,85.209-92.562,27.676-6.482,70.2-20.034,70.2-20.034s7.248,57.785,21.023-8.642c0,0,17.558,1.99,24.7-3.944,18.006,38.5,19.544,1.56,19.544,1.56,25.136,3.318,61.576,20.837,124.057,109.766-78.289,26.1-140.437,53.505-218.726,79.6C365.713,360.506,323.828,333.167,282.305,316.009Z" />
