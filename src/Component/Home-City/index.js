@@ -1,7 +1,7 @@
 import React from "react";
-import image1 from "../../Images/city-2.png";
-import image2 from "../../Images/city-4.png";
-import image3 from "../../Images/city-3.png";
+import image1 from "../../Images/city1.png";
+import image2 from "../../Images/city2.png";
+import image3 from "../../Images/city3.png";
 
 const HomeCity = () => {
   return (
