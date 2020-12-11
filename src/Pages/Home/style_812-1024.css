@@ -1,0 +1,51 @@
+@media only screen 
+and (min-width: 812px) 
+and (max-width: 1024px) {
+  
+  :root {
+    --title-size: 3.8em;
+    --subtitle-size: 1.8em;
+    --demisub-size: 1.25em;
+    --bold: 700;
+    --demi-bold: 600;
+    --reg: 500;
+    --yellow: #F6D200;
+    }
+
+  .lText {
+    padding-left: 1em;
+  }
+  
+  .introP {
+      font-size: 1.2em;
+  }
+  
+  .scroll {
+      font-size: .9em;
+  }
+
+  .homeChapterLinks {
+    padding: 2em 0em;
+}
+  
+   /* Image Styling */
+   #homeCity {
+    width: 100%;
+    /* position: absolute; */
+  }
+
+  .mainText {
+    position: absolute;
+    z-index: 2;
+    padding: 0em 25em 0em 3em;
+  }
+
+  .chapterList {
+    padding: 0em 3em 0em 25em;
+    z-index: 3;
+  }
+
+  .homeBackground1 {
+    background-color: rgba(	235,  180, 1, 0.82)
+  }
+}

@@ -1,0 +1,27 @@
+@media only screen 
+and (min-width: 1025px) 
+and (max-width: 1622px) {
+  
+:root {
+  --title-size:4em;
+  --subtitle-size: 1.55em;
+  --demisub-size: 1.25em;
+  --bold: 700;
+  --demi-bold: 600;
+  --reg: 500;
+  --yellow: #F6D200;
+  }
+
+.introP {
+    font-size: .9em;
+}
+
+.scroll {
+    font-size: .85em;
+}
+
+.topPagePin{
+  height: 185vh;
+}
+
+}

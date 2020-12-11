@@ -1,0 +1,64 @@
+@media only screen 
+  and (min-width: 375px) 
+  and (max-width: 667px) { 
+
+    :root {
+      --title-size: 2em;
+      --subtitle-size: 1.4em;
+      --demisub-size: 1.2em;
+      --body-size: .66em;
+      --bold: 700;
+      --demi-bold: 600;
+      --reg: 500;
+      --yellow: #F6D200;
+      }
+  
+    .lText {
+      padding-left: 1em;
+    }
+
+    #homeTitlep2  {
+      justify-content: flex-start;
+      height: 40vh;
+    }
+    
+    .introP {
+        font-size: .66em;
+    }
+  
+    .subTitle{
+      --subtitle-size: 1em;
+    }
+    
+    .scroll {
+        font-size: .6em;
+    }
+  
+    .homeChapterLinks {
+      padding: .5em 0em;
+    }
+
+    .chapterList {
+      margin-top: 20em;
+      padding-top: 15em;
+    }
+  
+    .mainText {
+      position: absolute;
+      z-index: 2;
+      padding: 0em 1em 0em 0em;
+    }
+  
+    .homeBackground1 {
+      background-color: rgba(	235,  180, 1, 0.32);
+      margin-bottom: 6em;
+    }
+
+    .Cityimages {
+      justify-content: flex-end;
+    }
+    
+    #homeCity {
+      padding-top: 14em;
+    }
+  }

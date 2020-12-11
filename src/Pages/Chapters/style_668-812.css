@@ -1,0 +1,19 @@
+@media only screen 
+and (min-width: 668px) 
+and (max-width: 812px) { 
+
+  .chapterPageText {
+    position: absolute;
+    z-index: 6;
+    font-size: var(--body-size);
+  }  
+  .chapterPage {
+    position: relative;
+  }
+  
+  .p1, .p2, .p3, .p4, .p5, .p6 {
+    width: 45%;
+    padding-left: 2em;
+  }
+
+}

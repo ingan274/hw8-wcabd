@@ -1,0 +1,11 @@
+@media only screen 
+  and (min-width: 375px) 
+  and (max-width: 667px) { 
+
+    .chairp1, .chairp2, .chairp3, .chairp4, .chairp5, .chairp6 {
+      margin-left: 20%;
+      width: 80%;
+    }
+
+
+  }

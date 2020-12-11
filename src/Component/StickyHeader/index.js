@@ -3,7 +3,8 @@ import { Grid, Box } from '@material-ui/core';
 import {
     NavLink
 } from "react-router-dom";
-import "./style.scss"
+import "./style.scss";
+import "./style_375-667.css";
 import { gsap } from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 // import Scrollbar from 'smooth-scrollbar';

@@ -1,4 +1,7 @@
 import "./style.css";
+import "./style_812-1024.css";
+import "./style_668-812.css";
+import "./style_375-667.css";
 import React, { useState, useEffect } from "react";
 
 import Limb from "../../RightImages/Limb";
@@ -104,17 +107,17 @@ const Chapter = (props) => {
     return (
         <Box key={page} className="chapterPage">
             <Grid container direction="row" >
-                <Grid item container direction="column" xs={12} md={6} className="chapterPageText">
+                <Grid item container direction="column" xs={12} lg={6} className="chapterPageText">
                     {/* CHAPTER HEAD */}
                     <Grid item container direction="column" className="chapText" justify="center">
-                        <Box item="true" container direction="column" className="chapterTextContainer p1">
+                        <Box item="true" container direction="column" className="chapterTextContainer p1" id="lp1-mobile">
                             <Box className="chapterTitle1 p1Title">{p1Title}</Box>
                             <Box className="chapterText1 chreveal1 p1Text" py={2} pr={3}>{p1Text}</Box>
                         </Box>
                     </Grid>
 
                     {/* CHAPTER P1 */}
-                    <Grid item container direction="column" className="chapText" justify="center" >
+                    <Grid item container direction="column" className="chapText" id="lp3-mobile" justify="center" >
                         <Box className="chapterTextContainer p2">
                             <Box className="chapterTitle p2Title">{p2Title}</Box>
                             <Box className="chapterText p2Text" py={3} >{p2Text}</Box>
@@ -122,7 +125,7 @@ const Chapter = (props) => {
                     </Grid>
 
                     {/* CHAPTER P2 */}
-                    <Grid item container direction="column" className="chapText" justify="center" >
+                    <Grid item container direction="column" className="chapText" id="lp3-mobile" justify="center" >
                         <Box className="chapterTextContainer p3">
                             <Box className="chapterTitle p3Title">{p3Title}</Box>
                             <Box className="chapterText p3Text" py={3}>{p3Text}</Box>
@@ -130,7 +133,7 @@ const Chapter = (props) => {
                     </Grid>
 
                     {/* CHAPTER P3 */}
-                    <Grid item container direction="column" className="chapText" justify="center" >
+                    <Grid item container direction="column" className="chapText" id="lp4-mobile" justify="center" >
                         <Box className="chapterTextContainer p4">
                             <Box className="chapterTitle p4Title">{p4Title}</Box>
                             <Box className="chapterText p4Text" py={3}>{p4Text}</Box>
@@ -139,7 +142,7 @@ const Chapter = (props) => {
                     </Grid>
 
                     {/* CHAPTER P4 */}
-                    <Grid item container direction="column" className="chapText" justify="center" >
+                    <Grid item container direction="column" className="chapText" id="lp5-mobile" justify="center" >
                         <Box className="chapterTextContainer p5">
                             <Box className="chapterTitle p5Title">{p5Title}</Box>
                             <Box className="chapterText p5Text" py={3}>{p5Text}</Box>
@@ -147,7 +150,7 @@ const Chapter = (props) => {
                     </Grid>
 
                     {/* CHAPTER P5 */}
-                    <Grid item container direction="column" className="chapText" justify="center">
+                    <Grid item container direction="column" className="chapText" id="lp6-mobile" justify="center">
                         <Box className="chapterTextContainer p6">
                             <Box className="chapterTitle p6Title">{p6Title}</Box>
                             <Box className="chapterText p6Text" py={3}>{p6Text}</Box>

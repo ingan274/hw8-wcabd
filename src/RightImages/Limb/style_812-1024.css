@@ -1,0 +1,11 @@
+@media only screen 
+and (min-width: 812px) 
+and (max-width: 1024px) {
+
+.imagePin_limb3, .limbPart4, .lLast {
+  padding-top: 10em;
+  margin-left: 45%;
+  width: 55%;
+}
+
+  }

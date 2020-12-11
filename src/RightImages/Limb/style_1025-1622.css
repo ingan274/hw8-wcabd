@@ -1,0 +1,27 @@
+@media only screen 
+and (min-width: 1025px) 
+and (max-width: 1622px) {
+
+#limbBody1 {
+    padding-top: 2em;
+    width: 100%;
+}
+
+#limbBody23 {
+    padding-top: 2em;
+    width: 100%;
+}
+
+#limbBody4 {
+    padding-top: 2em;
+    width: 100%;
+}
+
+#limbBody56 {
+    padding-top: 2em;
+    width: 100%;
+}
+
+
+
+  }

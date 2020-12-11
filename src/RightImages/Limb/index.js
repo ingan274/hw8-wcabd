@@ -3,6 +3,10 @@ import { Grid, Box } from '@material-ui/core';
 import { gsap } from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Scrollbar from 'smooth-scrollbar';
+import "./style_1025-1622.css";
+import "./style_812-1024.css";
+import "./style_668-812.css";
+import "./style_375-667.css";
 import "./style.css";
 import Imagep1 from "../../Component/Limb_1";
 import Imagep23 from "../../Component/Limb_2_3";
@@ -12,23 +16,23 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Limb = (props) => {
 
-        // Reusable Fade In Function
-        function fadeIn(element, trigger, distance) {
-            let tlFadeIn = gsap.timeline({ paused: true });
-            tlFadeIn.to(`${element}`, {
-                opacity: 1,
-                ease: 'power1',
-            })
-    
-            ScrollTrigger.create({
-                trigger: `${trigger}`,
-                start: `top bottom-=${distance}%`,
-                scrub: true,
-                onEnter: () => tlFadeIn.play(),
-                onLeaveBack: () => tlFadeIn.reverse(),
-                // markers: true,
-            })
-        };
+    // Reusable Fade In Function
+    function fadeIn(element, trigger, distance) {
+        let tlFadeIn = gsap.timeline({ paused: true });
+        tlFadeIn.to(`${element}`, {
+            opacity: 1,
+            ease: 'power1',
+        })
+
+        ScrollTrigger.create({
+            trigger: `${trigger}`,
+            start: `top bottom-=${distance}%`,
+            scrub: true,
+            onEnter: () => tlFadeIn.play(),
+            onLeaveBack: () => tlFadeIn.reverse(),
+            // markers: true,
+        })
+    };
 
     // Pin Animation
     function pinAnimation(element, top, bottom) {
@@ -232,15 +236,16 @@ const Limb = (props) => {
         p4FadeInOut('#lp42', 30)
 
         // Page 5 and 6 Animations
-        fadeIn("#blur-sides", ".lLast", 80)
-        fadeIn("#blur-body", ".lLast", 78)
+        fadeIn("#blur-sides", ".lLast", 30)
+        fadeIn("#blur-body", ".lLast", 10)
         fadeIn("#lp61", ".p6Title", 80)
         fadeIn("#lp62", ".p6Title", 70)
         fadeIn("#lp63", ".p6Title", 60)
+
     })
 
     return (
-        <Grid item container direction="column" xs={12} md={6} className="chapterImages">
+        <Grid item container direction="column" xs={12} lg={6} className="chapterImages">
 
             {/* Page 1, 2, and 3 */}
             <Box item="true" className="imagePin_limb3">

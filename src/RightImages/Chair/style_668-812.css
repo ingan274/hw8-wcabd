@@ -1,0 +1,12 @@
+@media only screen 
+and (min-width: 668px) 
+and (max-width: 812px) { 
+
+
+  .chairp1, .chairp2, .chairp3, .chairp4, .chairp5, .chairp6  {
+    padding-top: 10em;
+    margin-left: 45%;
+    width: 55%;
+  }
+  
+  }

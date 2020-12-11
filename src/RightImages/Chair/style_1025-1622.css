@@ -1,0 +1,12 @@
+@media only screen 
+and (min-width: 1024px) 
+and (max-width: 1622px) {
+
+    .chapterTitle1, .chapterTitle, .chapterText1, .chapterText {
+        width: 100%;
+        background-color: rgba(	235,  180, 1, 0.82);
+        
+      }
+
+
+  }

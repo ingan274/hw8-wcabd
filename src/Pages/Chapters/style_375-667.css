@@ -1,0 +1,30 @@
+@media only screen 
+  and (min-width: 375px) 
+  and (max-width: 667px) { 
+
+    .chapterPageText {
+      position: absolute;
+      z-index: 6;
+      font-size: var(--body-size);
+      padding-bottom: 30em;
+    }  
+
+    .chapterPage {
+      position: relative;
+    }
+
+.chapterTitle1, .chapterTitle, .chapterText1, .chapterText {
+      width: 80%;
+      padding-left: 2em;
+      background-color: rgba(	235,  180, 1, 0.52);
+      
+    }
+.chapterTitle1, .chapterTitle {
+  margin-top: 4em;
+}
+
+    #lp1-mobile {
+      width: 80%;
+    }
+
+  }

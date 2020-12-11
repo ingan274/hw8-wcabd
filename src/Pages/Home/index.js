@@ -3,6 +3,10 @@ import {
     Link,
 } from "react-router-dom";
 import "./style.css";
+import "./style_1025-1622.css";
+import "./style_812-1024.css";
+import "./style_668-812.css";
+import "./style_375-667.css";
 import { Grid, Box } from '@material-ui/core';
 import { gsap } from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -33,6 +37,7 @@ const Home = (props) => {
         let bodyScrollBar = Scrollbar.init(document.body, {
             damping: 0.1,
             delegateTo: document,
+            continuousScrolling: false,
         });
 
         ScrollTrigger.scrollerProxy(".hpage", {
@@ -129,27 +134,31 @@ const Home = (props) => {
 
         <Box id="main" className="main-container">
             <Grid container direction="row" className="hpage">
-                <Grid item container direction="column" xs={6} md={6} className="mainText">
+                <Grid item container direction="column" xs={12} lg={6} className="mainText">
                     <Box className="topPagePin">
                         <Grid item container direction="column" className="introText home_p1 lText" justify="center">
+                            <Box className="homeBackground1">
                             <Box className="title reveal1">{p1Title}</Box>
                             <Box className="subTitle reveal1">{p1Subtitle}</Box>
                             <Box className="introP reveal2" my={1} px={1}>{p1Text1}</Box>
                             <Box className="introP reveal3" my={1} px={1}>{p1Text2}</Box>
                             <Box className="introP reveal4 " my={1} px={1}>{p1Text3}</Box>
                             <Box className="scroll reveal5" my={2} px={1}>{scroll}</Box>
+                            </Box>
                         </Grid>
                     </Box>
 
-                    <Grid item container direction="column" className="bookTitle home_p2 lText" justify="center">
+                    <Grid item container direction="column" className="bookTitle home_p2 lText" justify="center" id="homeTitlep2">
+                        <Box className="bookTitleText">
                         <Grid className="p2title title1 reveal">{p2Title1}</Grid>
                         <Grid className="p2title title1 reveal p2Trigger">{p2Title2}</Grid>
                         <Grid className="p2title title2 reveal">{p2Sub1}</Grid>
                         <Grid className="p2title title2 reveal">{p2Sub2}</Grid>
                         <Grid className="p2title title2 reveal">{p2Sub3}</Grid>
+                        </Box>
                     </Grid>
                 </Grid>
-                <Grid item xs={3} md={6} >
+                <Grid item xs={12} lg={6} >
                     <Box className="topPagePin">
                         <Box className="rContent Cityimages">
                             <Box id="homeCity"><Drawing /></Box>

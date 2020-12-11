@@ -4,6 +4,10 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Scrollbar from 'smooth-scrollbar';
 import "./style.css";
+import "./style_1025-1622.css";
+import "./style_812-1024.css";
+import "./style_668-812.css";
+import "./style_375-667.css";
 import P1svg from "../../Component/Chair_1";
 import P2svg from "../../Component/Chair_2";
 import P3svg from "../../Component/Chair_3";
@@ -188,7 +192,7 @@ const Chair = (props) => {
     })
 
     return (
-        <Grid item container direction="column" xs={12} md={6} className="chapterImages">
+        <Grid item container direction="column" xs={12} lg={6} className="chapterImages">
             {/* CHAPTER P0 */}
             <Grid item container direction="column" className="chapImage" justify="center">
                 <Box item="true" container="true" direction="column" className="chapterImageContainer chairp1">
